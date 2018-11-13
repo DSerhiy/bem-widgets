@@ -1,0 +1,100 @@
+/* Google font 'Source Sans Pro' */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-box-container {
+  flex: 25%;
+  padding : 5px;
+}
+
+/* info-box */
+
+.info-box {
+  display: flex; 
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-radius: 2px;
+  background-color: white;  
+}
+
+.info-box__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px; 
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;  
+}
+
+.info-box__icon::before {
+  content: 'icon';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 3rem;
+}
+
+.info-box__content {
+  flex: 1;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  padding: 10px; 
+}
+
+.info-box__content-title {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.info-box__content-number {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+/* progress bar */
+
+.progress-bar {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.progress-bar__status {
+  background-color: #fff;
+  height: inherit;
+  margin-bottom: 0.2rem;
+}
+
+.progress-bar__description {
+  text-transform: initial;
+  font-size: 0.825rem;
+}
+
+/* icons */
+
+.messages::before {content: '\f0e0';}
+.bookmarks::before {content: '\f024';}
+.bookmarks-2::before {content: '\f02e';}
+.uploads::before {content:'\f0c5';}
+.likes::before {content:'\f005';}
+.likes-2::before {content:'\f164';}
+.events::before {content:'\f073';}
+.comments::before {content:'\f086';}
+
+/* background colors */
+
+.bg-blue {background-color: #00bfef; color: white;}
+.bg-green {background-color: #00a65a; color: white;}
+.bg-orange {background-color: #f39c12; color: white;}
+.bg-red {background-color: #dd4b39; color: white;}
