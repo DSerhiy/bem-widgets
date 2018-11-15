@@ -13,7 +13,7 @@ body {
   flex-wrap: wrap;
 }
 
-.info-box-container {
+.container__item {
   flex: 25%;
   padding : 5px;
 }
@@ -52,12 +52,12 @@ body {
   padding: 10px; 
 }
 
-.info-box__content-title {
+.info-box__title {
   font-size: 0.875rem;
   font-weight: normal;
 }
 
-.info-box__content-number {
+.info-box__number {
   font-size: 1.125rem;
   font-weight: bold;
 }
@@ -81,16 +81,87 @@ body {
   font-size: 0.825rem;
 }
 
-/* icons */
+/*  .info-box__icon --modificators */
 
-.messages::before {content: '\f0e0';}
-.bookmarks::before {content: '\f024';}
-.bookmarks-2::before {content: '\f02e';}
-.uploads::before {content:'\f0c5';}
-.likes::before {content:'\f005';}
-.likes-2::before {content:'\f164';}
-.events::before {content:'\f073';}
-.comments::before {content:'\f086';}
+.info-box__icon--messages::before {content: '\f0e0';}
+.info-box__icon--bookmarks::before {content: '\f024';}
+.info-box__icon--bookmarks-2::before {content: '\f02e';}
+.info-box__icon--uploads::before {content:'\f0c5';}
+.info-box__icon--likes::before {content:'\f005';}
+.info-box__icon--likes-2::before {content:'\f164';}
+.info-box__icon--events::before {content:'\f073';}
+.info-box__icon--comments::before {content:'\f086';}
+
+
+/* box  */
+
+.box {
+  font-family: 'Source Sans Pro', sans-serif;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-radius: 2px;
+  background-color: white;  
+  position: relative;
+}
+
+.box__header {
+  padding: 10px 15px 20px; 
+}
+.box__number {
+  font-size: 2.375rem;
+  font-weight: bold;
+  margin-bottom: 5px; 
+}
+
+.box__title {
+  font-size: 0.9375rem;
+  font-weight: normal;
+}
+
+.box__icon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.box__icon::before {
+  content: 'icon';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 4.5rem;
+  color: rgba(0, 0, 0, 0.1);  
+  transition: font-size .3s linear;
+}
+
+.box:hover .box__icon::before {
+  font-size: 5rem;
+}
+
+.box__footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  font-size: 0.875rem;
+}
+
+.box__btn-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.box__btn-link:after {
+  content: '\f35a';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 800;
+  margin-left: 2px; 
+}
+
+/* box__icon -- modificators */
+.box__icon--cart::before {content:'\f07a';}
+.box__icon--user::before {content:'\f234';}
+.box__icon--chart::before {content:'\f080';}
+.box__icon--chart-pie::before {content:'\f200';}
+
 
 /* background colors */
 
